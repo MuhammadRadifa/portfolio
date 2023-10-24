@@ -8,7 +8,7 @@ import Tech from './components/tech/Tech'
 
 export default function Home() {
   return (
-    <main className='dark:bg-dark-primary mx-auto w-5/6 md:w-5/6 2xl:w-3/6'>
+    <main className=' mx-auto w-5/6 md:w-5/6 2xl:w-3/6'>
       <Navbar />
       <ScrollButton />
       <section className='border-t-2 border-slate-200/90'>

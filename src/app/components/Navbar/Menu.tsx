@@ -4,11 +4,15 @@ import { CgMoveTask } from 'react-icons/cg'
 import { IoMdContact } from 'react-icons/io'
 import { MdDarkMode, MdLightMode } from 'react-icons/md'
 
-export default function Menu() {
+export default function Menu({ isOpen }: any) {
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className='h-30 dark:border-dark-secondary dark:bg-dark-secondary absolute left-0 mt-2 w-32 -translate-x-24 rounded-md border-2 border-gray-primary bg-white p-2 '>
+    <div
+      className={`h-30 absolute left-0 mt-2 w-32 -translate-x-24 overflow-hidden rounded-md border-2 border-gray-primary bg-white p-2 transition-all duration-300 dark:border-dark-secondary dark:bg-dark-secondary ${
+        !isOpen && 'pointer-events-none opacity-0'
+      }`}
+    >
       <a
         href='#project'
         className='flex cursor-pointer items-center gap-2 text-sm font-light text-slate-500 hover:text-black dark:text-slate-400 dark:hover:text-slate-50'
