@@ -4,12 +4,13 @@ import { useState } from 'react'
 import { IconContext } from 'react-icons'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { AiOutlineClose } from 'react-icons/ai'
+import Menu from './Menu'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <nav className='flex items-center justify-between py-4 pb-2'>
-      <div className='text-md font-bold text-black'>Minifolio X</div>
+    <nav className='dark:bg-dark-primary top-10 z-50 flex items-center justify-between bg-white py-4 pb-2 dark:text-white'>
+      <div className='text-md font-bold text-black dark:text-white'>My Portfolio</div>
       <div className='hidden sm:block'>
         <ul className='flex space-x-4 text-sm text-slate-500'>
           <li>Home</li>
@@ -18,7 +19,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div
-        className='sm:hidden'
+        className='relative cursor-pointer transition-all sm:hidden'
         onClick={() => {
           setIsOpen(!isOpen)
         }}
@@ -26,6 +27,9 @@ export default function Navbar() {
         <IconContext.Provider value={{ style: { fontWeight: '500px' } }}>
           {isOpen ? <AiOutlineClose /> : <RxHamburgerMenu />}
         </IconContext.Provider>
+        <div className={` transition-all ${isOpen ? '' : 'translate-x-40'}`}>
+          <Menu />
+        </div>
       </div>
     </nav>
   )

@@ -10,7 +10,7 @@ export default function Hero() {
       <div className='w-[60%] overflow-hidden rounded-xl object-cover'>
         <Image src={'/profile.jpeg'} alt='profile' width={200} height={200} className='w-full' />
       </div>
-      <div className='mt-4 w-full text-center text-black sm:mt-0 sm:text-left'>
+      <div className='mt-4 w-full text-center text-black dark:text-gray-primary sm:mt-0 sm:text-left'>
         <h1 className='text-3xl font-bold lg:text-5xl'>Hello,I am Radifa.</h1>
         <h1 className='text-2xl font-light lg:text-4xl'>
           A{' '}
