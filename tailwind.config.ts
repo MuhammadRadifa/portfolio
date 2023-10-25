@@ -23,6 +23,12 @@ const config: Config = {
           primary: '#F5F5F5',
         },
       },
+      grayscale: {
+        60: '60%',
+      },
+      height: {
+        fullscreen: '100dvh',
+      },
     },
   },
   plugins: [],

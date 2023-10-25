@@ -1,15 +1,12 @@
-import { useTheme } from 'next-themes'
 import { BiCategory } from 'react-icons/bi'
 import { CgMoveTask } from 'react-icons/cg'
 import { IoMdContact } from 'react-icons/io'
-import { MdDarkMode, MdLightMode } from 'react-icons/md'
+import DarkToggle from './DarkToggle'
 
 export default function Menu({ isOpen }: any) {
-  const { theme, setTheme } = useTheme()
-
   return (
     <div
-      className={`h-30 absolute left-0 mt-2 w-32 -translate-x-24 overflow-hidden rounded-md border-2 border-gray-primary bg-white p-2 transition-all duration-300 dark:border-dark-secondary dark:bg-dark-secondary ${
+      className={`h-30 absolute left-0 z-50 mt-2 w-32 -translate-x-24 overflow-hidden rounded-md border-2 border-gray-primary bg-white p-2 transition-all duration-300 dark:border-dark-secondary dark:bg-dark-secondary ${
         !isOpen && 'pointer-events-none opacity-0'
       }`}
     >
@@ -40,13 +37,7 @@ export default function Menu({ isOpen }: any) {
         </span>
         Contact{' '}
       </a>
-      <button
-        onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
-        className=' mt-2 flex items-center gap-2 text-sm font-light text-slate-500 hover:text-black dark:text-slate-400 dark:hover:text-slate-50 '
-      >
-        <span className='text-lg'>{theme == 'light' ? <MdDarkMode /> : <MdLightMode />}</span>
-        {theme == 'light' ? 'Dark' : 'Light'}
-      </button>
+      <DarkToggle isOpen={isOpen} />
     </div>
   )
 }
