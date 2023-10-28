@@ -29,7 +29,7 @@ export default function Hero() {
         </p>
         <a
           href='./cv.pdf'
-          target='_blank'
+          download={true}
           className='group mx-auto mt-2 flex w-fit items-center gap-2 hover:text-slate-600 sm:mx-0'
         >
           Download CV{' '}

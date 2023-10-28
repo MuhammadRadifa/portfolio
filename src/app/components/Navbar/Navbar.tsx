@@ -53,7 +53,7 @@ export default function Navbar() {
         </svg>
         <h1>My Portfolio</h1>
       </div>
-      <div className='hidden sm:block'>
+      <div className='hidden w-fit sm:block'>
         <ul className='flex space-x-4 text-sm text-slate-500 sm:text-base'>
           <li>
             <a href='#project'>Project</a>
